@@ -2,35 +2,51 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=23905142)
 # :checkered_flag: Gerenciamento de Oficina
 
-Breve descrição do que o seu projeto faz.
+O **Gerenciamento de Oficina** é uma solução digital desenvolvida para otimizar o fluxo de trabalho de centros automotivos. A aplicação permite o controlo eficiente de agendamentos, ordens de serviço, manutenção de veículos e gestão de peças, promovendo uma comunicação transparente entre a oficina e os seus clientes.
 
 ## :technologist: Membros da equipe
 André Alves de Freitas - 540683 - EC
 Pedro Nobrega Damacena - 536543 - EC
 
 ## :bulb: Objetivo Geral
-Descrever o objetivo de geral do projeto
+Automatizar os processos administrativos e operacionais de uma oficina mecânica, permitindo o registo digital de manutenções, controlo de estoque e o acompanhamento de ordens de serviço em tempo real.
 
 ## :eyes: Público-Alvo
-Público-alvo do projeto
+* **Proprietários e Gestores de Oficinas:** Que necessitam de uma ferramenta para organizar o fluxo de trabalho.
+* **Mecânicos/Funcionários:** Que precisam consultar e atualizar o estado das reparações.
+* **Clientes (Proprietários de Veículos):** Que desejam transparência no serviço e acesso ao histórico do veículo.
+## :warning: Observação Acadêmica (Público-Alvo)
+
+Diferente de projetos que visam cumprir horas de extensão, este sistema foi desenvolvido para fins puramente acadêmicos e técnicos dentro da disciplina. Como o nosso curso não exige obrigatoriamente a aplicação prática em uma comunidade externa (horas de extensão) para este projeto específico, o **cliente e os cenários descritos são fictícios**. 
 
 ## :star2: Impacto Esperado
-Descreva o impacto esperado do projeto em relação ao público alvo
+Espera-se uma redução no tempo de entrega dos veículos, maior precisão na gestão de peças e uma melhoria significativa na experiência do cliente, que passa a ter acesso digital ao progresso dos serviços contratados.
 
 ## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
-Informe aqui os tipos de usuário que irão interagir com a aplicação. Ex: administrador, locador, locatario, usuário não logado.
-
+* **Administrador:** Gestão total do sistema, incluindo relatórios financeiros e gestão de utilizadores.
+* **Funcionário (Mecânico):** Responsável pela atualização técnica das Ordens de Serviço (OS) e consulta de peças.
+* **Cliente:** Consulta os seus veículos cadastrados e o estado atual das suas ordens de serviço.
+* **Visitante:** Acesso a informações básicas da oficina, como serviços prestados, localização e contacto.
 > Tenha em mente que obrigatoriamente a aplicação deve possuir funcionalidades acessíveis a todos os tipos de usuário e outra funcionalidades restritas a certos tipos de usuários.
 
 ## :triangular_flag_on_post:	 Principais funcionalidades da aplicação
 
-Descreva ou liste brevemente as principais funcionalidades da aplicação que será desenvolvida. Destaque a funcionalidades que serão acessíveis a todos os usuários e aquelas restritas a usuários logados.
+**Funcionalidades Públicas:**
+* Consulta de catálogo de serviços (Troca de óleo, travões, etc.).
+* Página de contacto e localização.
+* Registo de novo utilizador (Cliente).
 
+**Funcionalidades Restritas:**
+* **Área do Cliente:** Registo de veículos (Matrícula/Modelo) e consulta de orçamentos.
+* **Área do Funcionário:** Abertura e edição de Ordens de Serviço (OS) e atualização de estado (Em Espera, Em Reparação, Concluído).
+* **Gestão de Stock:** Controlo de entrada e saída de peças (Apenas Admin/Funcionário autorizado).
 ## :spiral_calendar: Entidades ou tabelas do sistema
 
-Liste as principais entidades do sistema.
-
+* **Usuário:** Dados de perfil (Admin, Funcionário, Cliente).
+* **Veículo:** Informações dos automóveis (Matrícula, Marca, Modelo, Ano).
+* **Ordem de Serviço (OS):** Regista o problema, mecânico atribuído, data de entrada e estado.
+* **Peça/Serviço:** Catálogo de componentes e mão-de-obra com valores unitários.
 
 ----
 
