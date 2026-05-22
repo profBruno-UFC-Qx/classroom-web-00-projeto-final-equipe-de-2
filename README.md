@@ -2,7 +2,7 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=23905142)
 # :checkered_flag: Gerenciamento de Oficina
 
-O **Gerenciamento de Oficina** é uma solução digital desenvolvida para otimizar o fluxo de trabalho de centros automotivos. A aplicação permite o controlo eficiente de agendamentos, ordens de serviço, manutenção de veículos e gestão de peças, promovendo uma comunicação transparente entre a oficina e os seus clientes.
+O **Gerenciamento de Oficina** é uma solução digital desenvolvida para otimizar o fluxo de trabalho de centros automotivos. A aplicação permite o controle eficiente de agendamentos, ordens de serviço, manutenção de veículos e gestão de peças, promovendo uma comunicação transparente entre a oficina e os seus clientes.
 
 ## :technologist: Membros da equipe
 André Alves de Freitas - 540683 - EC
