@@ -1,0 +1,92 @@
+/* =============================================================
+   contato.css — Nóbrega Auto Center · Página de Contato
+   Depende de: layout.css (variáveis globais)
+   ============================================================= */
+
+/* ===== SEÇÃO PRINCIPAL ===== */
+.section-contato {
+    min-height: calc(100vh - 120px);
+    padding: 48px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* ===== CARD ===== */
+.card-oficina {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra);
+    height: 100%;
+}
+
+.card-oficina .card-header {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    font-weight: 700;
+    border-radius: var(--raio-borda) var(--raio-borda) 0 0;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 20px;
+    font-size: 0.92rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===== INFO ITEMS ===== */
+.info-item {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--cor-texto-suave);
+    margin-bottom: 2px;
+}
+
+.info-value {
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+    font-weight: 500;
+}
+
+.info-value a { color: var(--cor-texto); }
+.info-value a:hover { color: var(--cor-primaria); text-decoration: none; }
+
+/* ===== HORÁRIOS ===== */
+.horario-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--cor-borda);
+    font-size: 0.9rem;
+}
+
+.horario-row:last-child { border-bottom: none; }
+
+.horario-dia  { color: var(--cor-texto-suave); }
+.horario-hora { color: var(--cor-texto); font-weight: 600; }
+
+.badge-fechado {
+    color: var(--cor-primaria);
+}
+
+/* ===== MAPA ===== */
+.map-wrapper iframe {
+    width: 100%;
+    height: 320px;
+    display: block;
+    border: none;
+    border-radius: 0 0 var(--raio-borda) var(--raio-borda);
+    filter: invert(90%) hue-rotate(180deg) brightness(0.85) contrast(1.05);
+}
