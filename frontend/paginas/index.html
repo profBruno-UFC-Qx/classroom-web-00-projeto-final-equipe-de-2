@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Cliente - Nóbrega Auto Center</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/layout.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-oficina">
+        <div class="container">
+            <span class="navbar-brand">
+                <i class="bi bi-wrench-adjustable me-2"></i>
+                Nóbrega <span>Auto Center</span>
+            </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <i class="bi bi-list" style="color: var(--cor-texto);"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item"><a class="nav-link nav-link-oficina active" href="principal.html">Painel</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-oficina" href="#">Meus Veículos</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-oficina" href="#">Ordens de Serviço</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-oficina" href="login.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="secao-boas-vindas">
+            <div class="container">
+                <h1>Olá, André!</h1>
+                <p>Acompanhe aqui o status dos seus veículos e serviços.</p>
+            </div>
+        </section>
+
+        <section class="container py-4">
+
+            <div class="row g-3 mb-4">
+                <div class="col-12 col-sm-4">
+                    <article class="card card-oficina p-3">
+                        <p class="metrica-label">Veículos cadastrados</p>
+                        <strong class="metrica-valor">2</strong>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <article class="card card-oficina p-3">
+                        <p class="metrica-label">Ordens de serviço</p>
+                        <strong class="metrica-valor">3</strong>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <article class="card card-oficina p-3">
+                        <p class="metrica-label">Em andamento</p>
+                        <strong class="metrica-valor">1</strong>
+                    </article>
+                </div>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-12 col-lg-8">
+                    <article class="card card-oficina">
+                        <header class="card-header">Ordens de Serviço</header>
+                        <div class="card-body p-0">
+                            <table class="table table-oficina mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Nº OS</th>
+                                        <th>Veículo</th>
+                                        <th>Serviço</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#0042</td>
+                                        <td>Fiat Argo 2021</td>
+                                        <td>Troca de óleo</td>
+                                        <td><span class="badge-status badge-concluido">Concluído</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#0055</td>
+                                        <td>Honda City 2019</td>
+                                        <td>Suspensão dianteira</td>
+                                        <td><span class="badge-status badge-andamento">Em reparação</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#0061</td>
+                                        <td>Honda City 2019</td>
+                                        <td>Alinhamento</td>
+                                        <td><span class="badge-status badge-espera">Em espera</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-lg-4">
+                    <article class="card card-oficina">
+                        <header class="card-header">Meus Veículos</header>
+                        <div class="card-body">
+                            <ul class="lista-veiculos">
+                                <li class="item-veiculo">
+                                    <strong>Fiat Argo</strong>
+                                    <p>2021 &mdash; HBX-4E21</p>
+                                </li>
+                                <li class="item-veiculo">
+                                    <strong>Honda City</strong>
+                                    <p>2019 &mdash; OPQ-7F89</p>
+                                </li>
+                            </ul>
+                            <div class="d-grid mt-3">
+                                <a href="#" class="btn btn-outline-oficina">Adicionar veículo</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-oficina">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Nóbrega Auto Center &mdash; Av. João Pessoa, 3737, Fortaleza-CE &nbsp;|&nbsp; (85) 3494-3737</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -23,6 +23,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -53,8 +56,20 @@ nav.navbar-oficina .navbar-brand span {
     color: var(--cor-primaria);
 }
 
+.nav-link-oficina {
+    color: var(--cor-texto-suave) !important;
+}
+
+.nav-link-oficina:hover,
+.nav-link-oficina.active {
+    color: var(--cor-primaria) !important;
+}
+
+main {
+    flex: 1;
+}
+
 main.tela-centralizada {
-    min-height: calc(100vh - 120px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,6 +146,27 @@ label {
     transform: translateY(0);
 }
 
+.btn-outline-oficina {
+    background-color: transparent;
+    color: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+    border-radius: var(--raio-borda);
+    padding: 8px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.88rem;
+    display: block;
+    text-align: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-outline-oficina:hover {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    text-decoration: none;
+}
+
 footer.footer-oficina {
     background-color: #0a0a0a;
     border-top: 2px solid var(--cor-primaria);
@@ -138,4 +174,105 @@ footer.footer-oficina {
     padding: 16px 0;
     text-align: center;
     font-size: 0.85rem;
+}
+
+/* Tela principal */
+
+.secao-boas-vindas {
+    background-color: #0a0a0a;
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 20px 0;
+}
+
+.secao-boas-vindas h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.secao-boas-vindas p {
+    color: var(--cor-texto-suave);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.metrica-label {
+    color: var(--cor-texto-suave);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.metrica-valor {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+}
+
+.table-oficina {
+    color: var(--cor-texto);
+    border-color: var(--cor-borda);
+}
+
+.table-oficina thead th {
+    background-color: #141414;
+    color: var(--cor-texto-suave);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    border-color: var(--cor-borda);
+    padding: 10px 16px;
+}
+
+.table-oficina tbody td {
+    border-color: var(--cor-borda);
+    padding: 10px 16px;
+    font-size: 0.92rem;
+    vertical-align: middle;
+}
+
+.badge-status {
+    padding: 3px 10px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.badge-concluido {
+    background-color: #1a3d2b;
+    color: #4caf87;
+}
+
+.badge-andamento {
+    background-color: #3d1a1a;
+    color: #ff6b6b;
+}
+
+.badge-espera {
+    background-color: #3d2f00;
+    color: var(--cor-secundaria);
+}
+
+.lista-veiculos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-veiculo {
+    background-color: var(--cor-fundo-input);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    padding: 10px 12px;
+}
+
+.item-veiculo strong {
+    display: block;
+    font-size: 0.95rem;
+}
+
+.item-veiculo p {
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--cor-texto-suave);
 }
