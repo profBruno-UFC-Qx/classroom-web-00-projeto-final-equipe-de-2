@@ -93,6 +93,27 @@ nav.navbar-oficina .navbar-brand span {
     letter-spacing: 1px;
 }
 
+.card-oficina .card-header {
+    color: var(--cor-texto);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.card-header-oficina {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: var(--raio-borda) var(--raio-borda) 0 0;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 12px;
+}
+
+.class-header .titulo {
+    color: #f0f0f0;
+}
+
 label {
     color: var(--cor-texto-suave);
     font-size: 0.9rem;
@@ -178,123 +199,22 @@ footer.footer-oficina {
     font-size: 0.85rem;
 }
 
-/* Tela principal */
-
-.secao-boas-vindas {
-    background-color: #0a0a0a;
-    border-bottom: 1px solid var(--cor-borda);
-    padding: 20px 0;
-}
-
-.secao-boas-vindas h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.secao-boas-vindas p {
+.texto-suave {
     color: var(--cor-texto-suave);
-    margin: 0;
     font-size: 0.9rem;
 }
 
-.icone-metrica {
-    font-size: 2rem;
+.texto-pequeno {
+    font-size: 0.82rem;
+}
+
+.separador {
+    border-color: var(--cor-borda);
+}
+
+.erro-msg {
     color: var(--cor-primaria);
-    flex-shrink: 0;
-}
-
-.icone-amarelo {
-    color: var(--cor-secundaria);
-}
-
-.metrica-label {
-    color: var(--cor-texto-suave);
-    font-size: 0.82rem;
-    margin: 0;
-}
-
-.metrica-valor {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--cor-texto);
-    line-height: 1.2;
-}
-
-.table-oficina {
-    color: var(--cor-texto);
-    border-color: var(--cor-borda);
-}
-
-.table-oficina thead th {
-    background-color: #141414;
-    color: var(--cor-texto-suave);
-    font-size: 0.82rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-color: var(--cor-borda);
-    padding: 12px 16px;
-}
-
-.table-oficina tbody td {
-    border-color: var(--cor-borda);
-    padding: 12px 16px;
-    vertical-align: middle;
-    font-size: 0.92rem;
-}
-
-.table-oficina tbody tr:hover {
-    background-color: #222222;
-}
-
-.badge-status {
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 0.78rem;
-    font-weight: 600;
-}
-
-.badge-concluido {
-    background-color: rgba(25, 135, 84, 0.2);
-    color: #4caf87;
-}
-
-.badge-andamento {
-    background-color: rgba(204, 0, 0, 0.2);
-    color: #ff6b6b;
-}
-
-.badge-espera {
-    background-color: rgba(232, 168, 0, 0.2);
-    color: var(--cor-secundaria);
-}
-
-.lista-veiculos {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.item-veiculo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: var(--cor-fundo-input);
-    border: 1px solid var(--cor-borda);
-    border-radius: var(--raio-borda);
-    padding: 12px;
-}
-
-.item-veiculo strong {
-    display: block;
-    font-size: 0.95rem;
-    color: var(--cor-texto);
-}
-
-.item-veiculo p {
-    margin: 0;
-    font-size: 0.82rem;
-    color: var(--cor-texto-suave);
+    font-size: 0.88rem;
+    text-align: center;
+    display: none;
 }
