@@ -77,6 +77,10 @@ main.tela-centralizada {
     letter-spacing: 1px;
 }
 
+.class-header .titulo{
+    color: #f0f0f0;
+}
+
 label {
     color: var(--cor-texto-suave);
     font-size: 0.9rem;
@@ -172,4 +176,9 @@ footer.footer-oficina {
     letter-spacing: 1px;
     text-align: center;
     padding: 12px;
+}
+
+.card-oficina .card-header {
+    color: var(--cor-texto);
+    border-bottom: 1px solid var(--cor-borda);
 }
