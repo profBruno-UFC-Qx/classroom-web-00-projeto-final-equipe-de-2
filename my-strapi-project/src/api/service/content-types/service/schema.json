@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero_os": {
+      "type": "string",
+      "required": true
+    },
+    "descricao": {
+      "type": "string",
+      "required": true
+    },
+    "estado_atual": {
+      "type": "enumeration",
+      "enum": [
+        "em_espera",
+        "em_andamento",
+        "concluido"
+      ]
+    },
+    "data_entrada": {
+      "type": "date"
+    },
+    "data_conclusao": {
+      "type": "date"
+    }
+  }
+}

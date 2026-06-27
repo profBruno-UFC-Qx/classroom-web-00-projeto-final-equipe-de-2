@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cars",
+  "info": {
+    "singularName": "car",
+    "pluralName": "cars",
+    "displayName": "Car"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "marca": {
+      "type": "string",
+      "required": true
+    },
+    "modelo": {
+      "type": "string",
+      "required": true
+    },
+    "ano": {
+      "type": "biginteger",
+      "required": true
+    },
+    "placa": {
+      "type": "string",
+      "required": true
+    },
+    "cor": {
+      "type": "string",
+      "required": true
+    },
+    "cliente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "cars"
+    }
+  }
+}
