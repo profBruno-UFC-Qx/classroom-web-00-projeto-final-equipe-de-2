@@ -116,3 +116,14 @@
     font-size: 0.82rem;
     color: var(--cor-texto-suave);
 }
+
+.btn-nova-os {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 0.88rem;
+    white-space: nowrap;
+}
+
+.icone-verde {
+    color: #4caf87;
+}

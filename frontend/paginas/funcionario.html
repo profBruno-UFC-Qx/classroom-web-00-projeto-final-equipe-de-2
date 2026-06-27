@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Funcionário - Nóbrega Auto Center</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/layout_principal.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-oficina">
+        <div class="container">
+            <span class="navbar-brand">
+                <i class="bi bi-wrench-adjustable me-2"></i>
+                Nóbrega <span>Auto Center</span>
+            </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <i class="bi bi-list" style="color: var(--cor-texto);"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+                    <li class="nav-item"><a class="nav-link nav-link-oficina active" href="funcionario.html"><i class="bi bi-house me-1"></i>Painel</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-oficina" href="#"><i class="bi bi-people me-1"></i>Clientes</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-oficina" href="#"><i class="bi bi-file-text me-1"></i>Ordens de Serviço</a></li>
+                    <li class="nav-item ms-lg-2"><a class="nav-link nav-link-oficina" href="login.html"><i class="bi bi-box-arrow-right me-1"></i>Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="secao-boas-vindas">
+            <div class="container d-flex align-items-center justify-content-between flex-wrap gap-2">
+                <div>
+                    <h1>Olá, João!</h1>
+                    <p>Gerencie as ordens de serviço da oficina.</p>
+                </div>
+                <a href="#" class="btn-oficina btn-nova-os">
+                    <i class="bi bi-plus-circle me-2"></i>Nova Ordem de Serviço
+                </a>
+            </div>
+        </section>
+
+        <section class="container py-4">
+
+            <div class="row g-3 mb-4">
+                <div class="col-12 col-sm-4">
+                    <article class="card card-oficina card-metrica">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <i class="bi bi-file-earmark-text-fill icone-metrica"></i>
+                            <div>
+                                <p class="metrica-label">Total de OS abertas</p>
+                                <strong class="metrica-valor">8</strong>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <article class="card card-oficina card-metrica">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <i class="bi bi-clock-history icone-metrica icone-amarelo"></i>
+                            <div>
+                                <p class="metrica-label">Em andamento</p>
+                                <strong class="metrica-valor">3</strong>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <article class="card card-oficina card-metrica">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <i class="bi bi-check-circle-fill icone-metrica icone-verde"></i>
+                            <div>
+                                <p class="metrica-label">Concluídas hoje</p>
+                                <strong class="metrica-valor">2</strong>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <article class="card card-oficina">
+                <header class="card-header d-flex align-items-center justify-content-between">
+                    <span><i class="bi bi-list-check me-2"></i>Todas as Ordens de Serviço</span>
+                </header>
+                <div class="card-body p-0">
+                    <table class="table table-oficina mb-0">
+                        <thead>
+                            <tr>
+                                <th>Nº OS</th>
+                                <th>Cliente</th>
+                                <th>Veículo</th>
+                                <th>Serviço</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#0042</td>
+                                <td>Pedro Alves</td>
+                                <td>Fiat Argo 2021</td>
+                                <td>Troca de óleo</td>
+                                <td><span class="badge-status badge-concluido">Concluído</span></td>
+                            </tr>
+                            <tr>
+                                <td>#0055</td>
+                                <td>Pedro Alves</td>
+                                <td>Honda City 2019</td>
+                                <td>Suspensão dianteira</td>
+                                <td><span class="badge-status badge-andamento">Em reparação</span></td>
+                            </tr>
+                            <tr>
+                                <td>#0061</td>
+                                <td>Pedro Alves</td>
+                                <td>Honda City 2019</td>
+                                <td>Alinhamento</td>
+                                <td><span class="badge-status badge-espera">Em espera</span></td>
+                            </tr>
+                            <tr>
+                                <td>#0063</td>
+                                <td>Maria Silva</td>
+                                <td>VW Gol 2018</td>
+                                <td>Freios dianteiros</td>
+                                <td><span class="badge-status badge-andamento">Em reparação</span></td>
+                            </tr>
+                            <tr>
+                                <td>#0064</td>
+                                <td>Carlos Melo</td>
+                                <td>Hyundai HB20 2022</td>
+                                <td>Revisão geral</td>
+                                <td><span class="badge-status badge-espera">Em espera</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="footer-oficina">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Nóbrega Auto Center &mdash; Av. João Pessoa, 3737, Fortaleza-CE &nbsp;|&nbsp; (85) 3494-3737</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
