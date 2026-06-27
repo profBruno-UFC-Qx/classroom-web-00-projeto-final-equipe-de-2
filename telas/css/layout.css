@@ -139,3 +139,37 @@ footer.footer-oficina {
     text-align: center;
     font-size: 0.85rem;
 }
+
+/* ===== UTILITÁRIOS ===== */
+
+.texto-suave {
+    color: var(--cor-texto-suave);
+    font-size: 0.9rem;
+}
+
+.texto-pequeno {
+    font-size: 0.82rem;
+}
+
+.separador {
+    border-color: var(--cor-borda);
+}
+
+.erro-msg {
+    color: var(--cor-primaria);
+    font-size: 0.88rem;
+    text-align: center;
+    display: none;
+}
+
+.card-header-oficina {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: var(--raio-borda) var(--raio-borda) 0 0;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 12px;
+}
