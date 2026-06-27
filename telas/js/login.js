@@ -12,7 +12,7 @@ form.addEventListener('submit', async function (e) {
     erroMsg.style.display = 'none';
 
     try {
-        const response = await fetch(`${API_URL}/api/auth/local?populate[role]=true`, {
+        const response = await fetch(`${API_URL}/api/auth/local`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ identifier: email, password: senha })
@@ -30,13 +30,23 @@ form.addEventListener('submit', async function (e) {
         localStorage.setItem('userId', data.user.id);
         localStorage.setItem('userName', data.user.username);
 
-        // Busca o role separadamente com o JWT recebido
-        const meResponse = await fetch(`${API_URL}/api/users/me?populate=role`, {
+        // SOLUÇÃO: Usar o endpoint /users/me em vez de /users/:id
+        const meResponse = await fetch(`${API_URL}/api/users/me?populate=*`, {
             headers: { Authorization: `Bearer ${data.jwt}` }
         });
         const meData = await meResponse.json();
+        
+        // Validação adicionada para evitar que erros 403 passem despercebidos
+        if (!meResponse.ok) {
+            console.error('Erro na requisição /me:', meData);
+            erroMsg.textContent = 'Erro ao verificar permissões do usuário.';
+            erroMsg.style.display = 'block';
+            return;
+        }
 
-        const role = meData?.role?.name ?? 'Authenticated';
+        console.log('meData completo:', meData);
+
+        const role = meData?.role?.name ?? 'Cliente';
         localStorage.setItem('userRole', role);
 
         if (role === 'Funcionario') {

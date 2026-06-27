@@ -518,6 +518,10 @@ export interface ApiCarCar extends Struct.CollectionTypeSchema {
   };
   attributes: {
     ano: Schema.Attribute.BigInteger & Schema.Attribute.Required;
+    cliente: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
     cor: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -532,10 +536,6 @@ export interface ApiCarCar extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    users_permissions_users: Schema.Attribute.Relation<
-      'oneToMany',
-      'plugin::users-permissions.user'
-    >;
   };
 }
 
@@ -1064,7 +1064,7 @@ export interface PluginUsersPermissionsUser
   };
   attributes: {
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    car: Schema.Attribute.Relation<'manyToOne', 'api::car.car'>;
+    cars: Schema.Attribute.Relation<'oneToMany', 'api::car.car'>;
     confirmationToken: Schema.Attribute.String & Schema.Attribute.Private;
     confirmed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     CPF: Schema.Attribute.UID & Schema.Attribute.Required;

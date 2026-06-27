@@ -74,11 +74,11 @@
       "type": "string",
       "required": true
     },
-    "car": {
+    "cars": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::car.car",
-      "inversedBy": "users_permissions_users"
+      "mappedBy": "cliente"
     }
   }
 }
