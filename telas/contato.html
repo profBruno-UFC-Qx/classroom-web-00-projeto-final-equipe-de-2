@@ -69,7 +69,7 @@
                             </div>
                             <div class="horario-row">
                                 <span class="horario-dia">Sábado</span>
-                                <span class="horario-hora">08h – 13h</span>
+                                <span class="horario-hora">08h – 12h</span>
                             </div>
                             <div class="horario-row">
                                 <span class="horario-dia">Domingo</span>
@@ -82,15 +82,35 @@
 
                 <!-- Mapa -->
                 <div class="col-12">
-                    <div class="card-oficina">
-                        <div class="card-header">
-                            Localização
-                        </div>
-                        <div class="card-body p-4">
-                            <p style="color: var(--cor-texto-suave);">[ conexão maps aqui ]</p>
-                        </div>
+                <div class="card-oficina">
+                    <div class="card-header">
+                        Localização
+                    </div>
+                    <div class="card-body p-4">
+                        
+                        <div id="mapa"></div>
+
+                        <script>
+                            function inicializar() {
+                                var coordenadas = {lat: -3.747315524757739, lng: -38.54476102908294};
+                                var mapa = new google.maps.Map(document.getElementById('mapa'), {
+                                    zoom: 15,
+                                    center: coordenadas 
+                                });
+
+                                var marker = new google.maps.Marker({
+                                    position: coordenadas,
+                                    map: mapa,
+                                    title: 'Nóbrega Auto Center' // Atualizei o título do marcador para ficar mais legal
+                                });
+                            }
+                        </script>
+                        <script async defer
+                            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr0_FzEaR8vKS7Jbn71iG-QEXETLKR24s&callback=inicializar">
+                        </script>
                     </div>
                 </div>
+            </div>
 
             </div>
         </div>

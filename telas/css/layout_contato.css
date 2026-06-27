@@ -90,3 +90,12 @@
     border-radius: 0 0 var(--raio-borda) var(--raio-borda);
     filter: invert(90%) hue-rotate(180deg) brightness(0.85) contrast(1.05);
 }
+#mapa {
+    height: 400px;
+    width: 100%;
+    
+    /* Dica extra: Adicionar um border-radius deixa o mapa 
+       com os cantos arredondados, combinando perfeitamente 
+       com os cards do Bootstrap! */
+    border-radius: 0.375rem; 
+}
