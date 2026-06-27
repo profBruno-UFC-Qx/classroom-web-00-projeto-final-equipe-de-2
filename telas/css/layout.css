@@ -38,6 +38,16 @@ a:hover {
     text-decoration: underline;
 }
 
+main {
+    flex: 1;
+}
+
+main.tela-centralizada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 nav.navbar-oficina {
     background-color: #0a0a0a;
     border-bottom: 2px solid var(--cor-primaria);
@@ -58,21 +68,12 @@ nav.navbar-oficina .navbar-brand span {
 
 .nav-link-oficina {
     color: var(--cor-texto-suave) !important;
+    transition: color 0.2s;
 }
 
 .nav-link-oficina:hover,
 .nav-link-oficina.active {
     color: var(--cor-primaria) !important;
-}
-
-main {
-    flex: 1;
-}
-
-main.tela-centralizada {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .card-oficina {
@@ -159,6 +160,7 @@ label {
     display: block;
     text-align: center;
     transition: background-color 0.2s, color 0.2s;
+    text-decoration: none;
 }
 
 .btn-outline-oficina:hover {
@@ -195,16 +197,27 @@ footer.footer-oficina {
     font-size: 0.9rem;
 }
 
+.icone-metrica {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    flex-shrink: 0;
+}
+
+.icone-amarelo {
+    color: var(--cor-secundaria);
+}
+
 .metrica-label {
     color: var(--cor-texto-suave);
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     margin: 0;
 }
 
 .metrica-valor {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--cor-texto);
+    line-height: 1.2;
 }
 
 .table-oficina {
@@ -217,36 +230,41 @@ footer.footer-oficina {
     color: var(--cor-texto-suave);
     font-size: 0.82rem;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
     border-color: var(--cor-borda);
-    padding: 10px 16px;
+    padding: 12px 16px;
 }
 
 .table-oficina tbody td {
     border-color: var(--cor-borda);
-    padding: 10px 16px;
-    font-size: 0.92rem;
+    padding: 12px 16px;
     vertical-align: middle;
+    font-size: 0.92rem;
+}
+
+.table-oficina tbody tr:hover {
+    background-color: #222222;
 }
 
 .badge-status {
-    padding: 3px 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
     font-size: 0.78rem;
     font-weight: 600;
-    border-radius: 4px;
 }
 
 .badge-concluido {
-    background-color: #1a3d2b;
+    background-color: rgba(25, 135, 84, 0.2);
     color: #4caf87;
 }
 
 .badge-andamento {
-    background-color: #3d1a1a;
+    background-color: rgba(204, 0, 0, 0.2);
     color: #ff6b6b;
 }
 
 .badge-espera {
-    background-color: #3d2f00;
+    background-color: rgba(232, 168, 0, 0.2);
     color: var(--cor-secundaria);
 }
 
@@ -256,19 +274,23 @@ footer.footer-oficina {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 .item-veiculo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     background-color: var(--cor-fundo-input);
     border: 1px solid var(--cor-borda);
     border-radius: var(--raio-borda);
-    padding: 10px 12px;
+    padding: 12px;
 }
 
 .item-veiculo strong {
     display: block;
     font-size: 0.95rem;
+    color: var(--cor-texto);
 }
 
 .item-veiculo p {

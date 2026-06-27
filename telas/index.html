@@ -20,11 +20,11 @@
                 <i class="bi bi-list" style="color: var(--cor-texto);"></i>
             </button>
             <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ms-auto gap-2">
-                    <li class="nav-item"><a class="nav-link nav-link-oficina active" href="principal.html">Painel</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-oficina" href="#">Meus Veículos</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-oficina" href="#">Ordens de Serviço</a></li>
-                    <li class="nav-item"><a class="nav-link nav-link-oficina" href="login.html">Sair</a></li>
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+                    <li class="nav-item"><a class="nav-link nav-link-oficina active" href="principal.html"><i class="bi bi-house me-1"></i>Painel</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-oficina" href="#"><i class="bi bi-car-front me-1"></i>Meus Veículos</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-oficina" href="#"><i class="bi bi-file-text me-1"></i>Ordens de Serviço</a></li>
+                    <li class="nav-item ms-lg-2"><a class="nav-link nav-link-oficina" href="login.html"><i class="bi bi-box-arrow-right me-1"></i>Sair</a></li>
                 </ul>
             </div>
         </div>
@@ -43,21 +43,36 @@
 
             <div class="row g-3 mb-4">
                 <div class="col-12 col-sm-4">
-                    <article class="card card-oficina p-3">
-                        <p class="metrica-label">Veículos cadastrados</p>
-                        <strong class="metrica-valor">2</strong>
+                    <article class="card card-oficina card-metrica">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <i class="bi bi-car-front-fill icone-metrica"></i>
+                            <div>
+                                <p class="metrica-label">Veículos cadastrados</p>
+                                <strong class="metrica-valor">2</strong>
+                            </div>
+                        </div>
                     </article>
                 </div>
                 <div class="col-12 col-sm-4">
-                    <article class="card card-oficina p-3">
-                        <p class="metrica-label">Ordens de serviço</p>
-                        <strong class="metrica-valor">3</strong>
+                    <article class="card card-oficina card-metrica">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <i class="bi bi-file-earmark-text-fill icone-metrica"></i>
+                            <div>
+                                <p class="metrica-label">Ordens de serviço</p>
+                                <strong class="metrica-valor">3</strong>
+                            </div>
+                        </div>
                     </article>
                 </div>
                 <div class="col-12 col-sm-4">
-                    <article class="card card-oficina p-3">
-                        <p class="metrica-label">Em andamento</p>
-                        <strong class="metrica-valor">1</strong>
+                    <article class="card card-oficina card-metrica">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <i class="bi bi-clock-history icone-metrica icone-amarelo"></i>
+                            <div>
+                                <p class="metrica-label">Em andamento</p>
+                                <strong class="metrica-valor">1</strong>
+                            </div>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -65,8 +80,10 @@
             <div class="row g-4">
 
                 <div class="col-12 col-lg-8">
-                    <article class="card card-oficina">
-                        <header class="card-header">Ordens de Serviço</header>
+                    <article class="card card-oficina h-100">
+                        <header class="card-header">
+                            <i class="bi bi-list-check me-2"></i>Ordens de Serviço
+                        </header>
                         <div class="card-body p-0">
                             <table class="table table-oficina mb-0">
                                 <thead>
@@ -103,21 +120,31 @@
                 </div>
 
                 <div class="col-12 col-lg-4">
-                    <article class="card card-oficina">
-                        <header class="card-header">Meus Veículos</header>
+                    <article class="card card-oficina h-100">
+                        <header class="card-header">
+                            <i class="bi bi-car-front me-2"></i>Meus Veículos
+                        </header>
                         <div class="card-body">
                             <ul class="lista-veiculos">
                                 <li class="item-veiculo">
-                                    <strong>Fiat Argo</strong>
-                                    <p>2021 &mdash; HBX-4E21</p>
+                                    <i class="bi bi-car-front-fill" style="font-size: 1.5rem; color: var(--cor-primaria); flex-shrink: 0;"></i>
+                                    <div>
+                                        <strong>Fiat Argo</strong>
+                                        <p>2021 &mdash; HBX-4E21</p>
+                                    </div>
                                 </li>
                                 <li class="item-veiculo">
-                                    <strong>Honda City</strong>
-                                    <p>2019 &mdash; OPQ-7F89</p>
+                                    <i class="bi bi-car-front-fill" style="font-size: 1.5rem; color: var(--cor-secundaria); flex-shrink: 0;"></i>
+                                    <div>
+                                        <strong>Honda City</strong>
+                                        <p>2019 &mdash; OPQ-7F89</p>
+                                    </div>
                                 </li>
                             </ul>
                             <div class="d-grid mt-3">
-                                <a href="#" class="btn btn-outline-oficina">Adicionar veículo</a>
+                                <a href="#" class="btn-outline-oficina">
+                                    <i class="bi bi-plus-circle me-1"></i>Adicionar veículo
+                                </a>
                             </div>
                         </div>
                     </article>
