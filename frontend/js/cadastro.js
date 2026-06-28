@@ -22,32 +22,38 @@ form.addEventListener('submit', async function (e) {
     }
 
     try {
-        const response = await fetch(`${API_URL}/api/auth/local/register`, {
+        const registerResponse = await fetch(`${API_URL}/api/auth/local/register`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                username: username,
-                email: email,
-                password: senha,
-                Telefone: telefone,
-                CPF: cpf
-            })
+            body: JSON.stringify({ username, email, password: senha })
         });
 
-        const data = await response.json();
+        const registerData = await registerResponse.json();
 
-        if (!response.ok) {
-            const mensagem = data?.error?.message || 'Erro ao realizar cadastro.';
+        if (!registerResponse.ok) {
+            const mensagem = registerData?.error?.message || 'Erro ao realizar cadastro.';
             erroMsg.textContent = mensagem;
             erroMsg.style.display = 'block';
             return;
         }
 
-        localStorage.setItem('jwt', data.jwt);
-        localStorage.setItem('userId', data.user.id);
-        localStorage.setItem('userName', data.user.username);
+        const jwt = registerData.jwt;
+        const userId = registerData.user.id;
 
-        window.location.href = './painel.html';
+        await fetch(`${API_URL}/api/users/${userId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${jwt}`
+            },
+            body: JSON.stringify({ Telefone: telefone, CPF: cpf })
+        });
+
+        localStorage.setItem('jwt', jwt);
+        localStorage.setItem('userId', userId);
+        localStorage.setItem('userName', registerData.user.username);
+
+        window.location.href = './index.html';
 
     } catch (err) {
         console.error(err);
