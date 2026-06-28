@@ -3,6 +3,14 @@ const API_URL = 'http://localhost:1337';
 const form = document.getElementById('form-login');
 const erroMsg = document.getElementById('erro-login');
 
+if (localStorage.getItem('cadastro_sucesso')) {
+    const msg = document.getElementById('erro-login');
+    msg.textContent = 'Cadastro realizado com sucesso! Faça login.';
+    msg.style.color = '#4caf87';
+    msg.style.display = 'block';
+    localStorage.removeItem('cadastro_sucesso');
+}
+
 form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
@@ -50,9 +58,9 @@ form.addEventListener('submit', async function (e) {
         localStorage.setItem('userRole', role);
 
         if (role === 'Funcionario') {
-            window.location.href = './painel-funcionario.html';
+            window.location.href = './index_funcionario.html';
         } else {
-            window.location.href = './painel.html';
+            window.location.href = './index.html';
         }
 
     } catch (err) {

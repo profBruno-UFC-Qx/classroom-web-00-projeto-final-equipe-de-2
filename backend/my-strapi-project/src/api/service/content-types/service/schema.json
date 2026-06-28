@@ -32,6 +32,12 @@
     },
     "data_conclusao": {
       "type": "date"
+    },
+    "car": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::car.car",
+      "inversedBy": "services"
     }
   }
 }

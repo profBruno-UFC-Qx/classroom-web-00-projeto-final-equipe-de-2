@@ -68,11 +68,11 @@
     },
     "CPF": {
       "type": "uid",
-      "required": true
+      "required": false
     },
     "Telefone": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "cars": {
       "type": "relation",

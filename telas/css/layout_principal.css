@@ -73,17 +73,17 @@
 
 .badge-concluido {
     background-color: rgba(25, 135, 84, 0.2);
-    color: #4caf87;
+    color: #0a0a0a;
 }
 
 .badge-andamento {
-    background-color: rgba(204, 0, 0, 0.2);
-    color: #ff6b6b;
+    background-color: rgba(232, 168, 0, 0.2);
+    color: #0a0a0a;
 }
 
 .badge-espera {
-    background-color: rgba(232, 168, 0, 0.2);
-    color: var(--cor-secundaria);
+    background-color: rgba(204, 0, 0, 0.2);
+    color: #0a0a0a;
 }
 
 .lista-veiculos {
@@ -115,4 +115,19 @@
     margin: 0;
     font-size: 0.82rem;
     color: var(--cor-texto-suave);
+}
+
+.table-oficina tbody tr.linha-vazia ~ tr {
+    display: none;
+}
+
+.card-oficina .card-body.p-0 {
+    background-color: #ffffff;
+    border-radius: 0 0 var(--raio-borda) var(--raio-borda);
+}
+
+.table-oficina tbody tr.linha-vazia td {
+    border-bottom: none;
+    height: 80px;
+    vertical-align: middle;
 }

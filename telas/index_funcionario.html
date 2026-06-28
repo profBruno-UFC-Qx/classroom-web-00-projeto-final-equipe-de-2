@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel do Cliente - Nóbrega Auto Center</title>
+    <title>Painel do Funcionário - Nóbrega Auto Center</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/layout.css">
@@ -23,7 +23,8 @@
             </button>
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
-                    <li class="nav-item"><a class="nav-link nav-link-oficina active" href="index.html"><i class="bi bi-house me-1"></i>Painel</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-oficina active" href="index_funcionario.html"><i class="bi bi-house me-1"></i>Painel</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-oficina" href="ordens-servico.html"><i class="bi bi-file-text me-1"></i>Ordens de Serviço</a></li>
                     <li class="nav-item ms-lg-2"><a class="nav-link nav-link-oficina" href="login.html"><i class="bi bi-box-arrow-right me-1"></i>Sair</a></li>
                 </ul>
             </div>
@@ -35,7 +36,7 @@
         <section class="secao-boas-vindas">
             <div class="container">
                 <h1>Olá, <span id="nome-usuario"></span>!</h1>
-                <p>Acompanhe aqui o status dos seus veículos e serviços.</p>
+                <p>Gerencie os veículos e ordens de serviço da oficina.</p>
             </div>
         </section>
 
@@ -47,7 +48,7 @@
                         <div class="card-body d-flex align-items-center gap-3">
                             <i class="bi bi-car-front-fill icone-metrica"></i>
                             <div>
-                                <p class="metrica-label">Veículos cadastrados</p>
+                                <p class="metrica-label">Total de veículos</p>
                                 <strong class="metrica-valor" id="total-veiculos">—</strong>
                             </div>
                         </div>
@@ -107,7 +108,7 @@
                 <div class="col-12 col-lg-4">
                     <article class="card card-oficina h-100">
                         <header class="card-header">
-                            <i class="bi bi-car-front me-2"></i>Meus Veículos
+                            <i class="bi bi-car-front me-2"></i>Veículos Cadastrados
                         </header>
                         <div class="card-body">
                             <ul class="lista-veiculos" id="lista-veiculos">
@@ -115,6 +116,11 @@
                                     <p class="texto-suave">Carregando...</p>
                                 </li>
                             </ul>
+                            <div class="d-grid mt-3">
+                                    <a href="cadastro_carros.html" class="btn-outline-oficina">
+                                        <i class="bi bi-plus-circle me-1"></i>Adicionar veículo
+                                    </a>
+                                </div>
                         </div>
                     </article>
                 </div>
@@ -131,6 +137,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/index_funcionario.js"></script>
 </body>
 </html>

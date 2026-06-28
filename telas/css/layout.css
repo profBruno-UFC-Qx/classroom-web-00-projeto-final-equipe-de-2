@@ -218,3 +218,20 @@ footer.footer-oficina {
     text-align: center;
     display: none;
 }
+
+.sucesso-msg {
+    color: #4caf87;
+    font-size: 0.88rem;
+    text-align: center;
+    display: none;
+}
+
+.alerta-sucesso {
+    margin-top: 10px;
+    padding: 10px 16px;
+    background: rgba(0, 180, 60, 0.12);
+    border: 1px solid rgba(0, 180, 60, 0.3);
+    color: #00cc44;
+    border-radius: var(--raio-borda);
+    font-size: 0.88rem;
+}
