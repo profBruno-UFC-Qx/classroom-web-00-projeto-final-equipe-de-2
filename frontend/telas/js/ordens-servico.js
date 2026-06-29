@@ -36,7 +36,7 @@ async function carregarOS() {
 
             const tr = document.createElement('tr');
             tr.innerHTML = `
-                <td>#${String(s.id).padStart(4, '0')}</td>
+                <td>#${s.numero_os ?? String(s.id).padStart(4, '0')}</td>
                 <td>${nomeVeiculo}</td>
                 <td>${s.descricao}</td>
                 <td>${dataEntrada}</td>

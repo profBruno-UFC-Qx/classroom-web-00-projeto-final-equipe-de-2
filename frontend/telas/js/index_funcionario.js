@@ -90,7 +90,7 @@ async function carregarServicos() {
             const badge = badgeMap[s.estado_atual] ?? s.estado_atual;
             const tr = document.createElement('tr');
             tr.innerHTML = `
-                <td>#${String(s.id).padStart(4, '0')}</td>
+                <td>#${s.numero_os ?? String(s.id).padStart(4, '0')}</td>
                 <td>${nomeVeiculo}</td>
                 <td>${s.descricao}</td>
                 <td>${badge}</td>
