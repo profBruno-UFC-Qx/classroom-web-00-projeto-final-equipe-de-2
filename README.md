@@ -15,71 +15,91 @@ Automatizar os processos administrativos e operacionais de uma oficina mecânica
 * **Proprietários e Gestores de Oficinas:** Que necessitam de uma ferramenta para organizar o fluxo de trabalho.
 * **Mecânicos/Funcionários:** Que precisam consultar e atualizar o estado das reparações.
 * **Clientes (Proprietários de Veículos):** Que desejam transparência no serviço e acesso ao histórico do veículo.
+
 ## :warning: Observação Acadêmica (Público-Alvo)
 
-Diferente de projetos que visam cumprir horas de extensão, este sistema foi desenvolvido para fins puramente acadêmicos e técnicos dentro da disciplina. Como o nosso curso não exige obrigatoriamente a aplicação prática em uma comunidade externa (horas de extensão) para este projeto específico, o **cliente e os cenários descritos são fictícios**. 
+Diferente de projetos que visam cumprir horas de extensão, este sistema foi desenvolvido para fins puramente acadêmicos e técnicos dentro da disciplina. Como o nosso curso não exige obrigatoriamente a aplicação prática em uma comunidade externa (horas de extensão) para este projeto específico, o **cliente e os cenários descritos são fictícios**.
 
 ## :star2: Impacto Esperado
 Espera-se uma redução no tempo de entrega dos veículos, maior precisão na gestão de peças e uma melhoria significativa na experiência do cliente, que passa a ter acesso digital ao progresso dos serviços contratados.
 
 ## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
-* **Administrador:** Gestão total do sistema, incluindo relatórios financeiros e gestão de utilizadores.
-* **Funcionário (Mecânico):** Responsável pela atualização técnica das Ordens de Serviço (OS) e consulta de peças.
-* **Cliente:** Consulta os seus veículos cadastrados e o estado atual das suas ordens de serviço.
-* **Visitante:** Acesso a informações básicas da oficina, como serviços prestados, localização e contacto.
+* **Administrador:** Gestão total do sistema via painel do Strapi.
+* **Funcionário (Mecânico):** Abertura, edição e remoção de Ordens de Serviço e Veículos.
+* **Cliente:** Consulta dos seus veículos cadastrados e o estado atual das suas ordens de serviço.
+* **Visitante:** Acesso às páginas públicas da oficina (home, contato, cadastro e login).
+
 > Tenha em mente que obrigatoriamente a aplicação deve possuir funcionalidades acessíveis a todos os tipos de usuário e outra funcionalidades restritas a certos tipos de usuários.
 
-## :triangular_flag_on_post:	 Principais funcionalidades da aplicação
+## :triangular_flag_on_post: Principais funcionalidades da aplicação
 
-**Funcionalidades Públicas:**
-* Consulta de catálogo de serviços (Troca de óleo, travões, etc.).
-* Página de contacto e localização.
-* Registo de novo utilizador (Cliente).
+**Funcionalidades Públicas (acessíveis sem login):**
+* Página inicial com apresentação da oficina e acesso ao sistema.
+* Página de contato com endereço, telefone, horários e mapa (Google Maps).
+* Cadastro de novo usuário (Cliente).
+* Login com redirecionamento automático por perfil (Cliente ou Funcionário).
 
-**Funcionalidades Restritas:**
-* **Área do Cliente:** Registo de veículos (Matrícula/Modelo) e consulta de orçamentos.
-* **Área do Funcionário:** Abertura e edição de Ordens de Serviço (OS) e atualização de estado (Em Espera, Em Reparação, Concluído).
-* **Gestão de Stock:** Controlo de entrada e saída de peças (Apenas Admin/Funcionário autorizado).
+**Funcionalidades Restritas — Área do Cliente:**
+* Dashboard com resumo de veículos e ordens de serviço.
+* Listagem dos veículos e ordens de serviço vinculados ao cliente logado.
+
+**Funcionalidades Restritas — Área do Funcionário:**
+* Dashboard com totais de veículos, ordens de serviço e serviços em andamento.
+* CRUD completo de Veículos (cadastrar, listar, editar e remover).
+* CRUD completo de Ordens de Serviço (abrir, listar, editar status e remover).
+* Vínculo automático entre OS e Veículo por placa.
+* Vínculo automático entre Veículo e Cliente por CPF.
+
 ## :spiral_calendar: Entidades ou tabelas do sistema
 
-* **Usuário:** Dados de perfil (Admin, Funcionário, Cliente).
-* **Veículo:** Informações dos automóveis (Matrícula, Marca, Modelo, Ano).
-* **Ordem de Serviço (OS):** Regista o problema, mecânico atribuído, data de entrada e estado.
-* **Peça/Serviço:** Catálogo de componentes e mão-de-obra com valores unitários.
-
-----
-
-:warning::warning::warning: As informações a seguir devem ser enviadas juntamente com a versão final do projeto. :warning::warning::warning:
-
+* **Usuário:** Dados de perfil (username, email, senha, CPF, Telefone) com role (Cliente ou Funcionário).
+* **Veículo (Car):** Marca, Modelo, Ano, Cor, Placa — vinculado a um Cliente.
+* **Ordem de Serviço (Service):** Número da OS, Descrição, Status (em_espera / em_andamento / concluido), Data de Entrada, Data de Conclusão — vinculada a um Veículo.
 
 ----
 
 ## :desktop_computer: Tecnologias e frameworks utilizados
 
 **Frontend:**
-
-Lista as tecnologias, frameworks e bibliotecas utilizados.
+* HTML5 semântico
+* CSS3 com variáveis customizadas (tema dark)
+* Bootstrap 5.3 (layout responsivo e componentes)
+* Bootstrap Icons 1.10
+* JavaScript (ES6+) — Fetch API, LocalStorage
 
 **Backend:**
-
-Lista as tecnologias, frameworks e bibliotecas utilizados.
-
+* Strapi 5 (Node.js)
+* SQLite (banco de dados em desenvolvimento)
+* Plugin users-permissions (autenticação JWT)
 
 ## :shipit: Operações implementadas para cada entidade da aplicação
 
-
-| Entidade| Criação | Leitura | Atualização | Remoção |
+| Entidade | Criação | Leitura | Atualização | Remoção |
 | --- | --- | --- | --- | --- |
-| Entidade 1 | X |  X  |  | X |
-| Entidade 2 | X |    |  X | X |
-| Entidade 3 | X |    |  |  |
-
-> Lembre-se que é necessário implementar o CRUD de pelo menos duas entidades.
+| Usuário (User) | ✅ | ✅ | ✅ | |
+| Veículo (Car) | ✅ | ✅ | ✅ | ✅ |
+| Ordem de Serviço (Service) | ✅ | ✅ | ✅ | ✅ |
 
 ## :neckbeard: Rotas da API REST utilizadas
 
-| Método HTTP | URL |
-| --- | --- |
-| GET | api/entidade1/|
-| POST | api/entidade2 |
+| Método HTTP | URL | Descrição |
+| --- | --- | --- |
+| POST | `/api/auth/local/register` | Cadastro de novo usuário |
+| POST | `/api/auth/local` | Login e geração do JWT |
+| GET | `/api/users/me?populate=*` | Dados do usuário logado (com role) |
+| PUT | `/api/users/:id` | Atualização de CPF e Telefone do usuário |
+| GET | `/api/users?filters[CPF][$eq]=...` | Busca de cliente por CPF |
+| GET | `/api/users/:id?populate=cars` | Veículos do cliente logado |
+| GET | `/api/cars` | Listagem de todos os veículos |
+| GET | `/api/cars/:documentId` | Dados de um veículo específico |
+| GET | `/api/cars?filters[placa][$eqi]=...` | Busca de veículo por placa |
+| POST | `/api/cars` | Cadastro de novo veículo |
+| PUT | `/api/cars/:documentId` | Atualização de veículo |
+| DELETE | `/api/cars/:documentId` | Remoção de veículo |
+| GET | `/api/services?populate=car&sort=createdAt:desc` | Listagem de ordens de serviço |
+| GET | `/api/services?filters[car][id][$in]=...&populate=car` | OSs filtradas por veículos do cliente |
+| GET | `/api/services/:documentId?populate=car` | Dados de uma OS específica |
+| POST | `/api/services` | Abertura de nova OS |
+| PUT | `/api/services/:documentId` | Atualização de OS |
+| DELETE | `/api/services/:documentId` | Remoção de OS |
