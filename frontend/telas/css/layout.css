@@ -235,3 +235,7 @@ footer.footer-oficina {
     border-radius: var(--raio-borda);
     font-size: 0.88rem;
 }
+
+.container .logo-clicavel {
+    text-decoration: none;
+}
