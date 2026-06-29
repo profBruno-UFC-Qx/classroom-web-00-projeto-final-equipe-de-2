@@ -12,6 +12,28 @@ const badgeMap = {
     concluido:    '<span class="badge-status badge-concluido">Concluído</span>',
 };
 
+async function deletarOS(documentId) {
+    if (!confirm('Tem certeza que deseja excluir esta ordem de serviço?')) return;
+
+    try {
+        const response = await fetch(`${API_URL}/api/services/${documentId}`, {
+            method: 'DELETE',
+            headers: { Authorization: `Bearer ${jwt}` }
+        });
+
+        if (!response.ok) {
+            alert('Erro ao excluir a ordem de serviço.');
+            return;
+        }
+
+        carregarOS();
+
+    } catch (err) {
+        console.error(err);
+        alert('Erro ao conectar com o servidor.');
+    }
+}
+
 async function carregarOS() {
     try {
         const response = await fetch(`${API_URL}/api/services?populate=car&sort=createdAt:desc`, {
@@ -41,13 +63,23 @@ async function carregarOS() {
                 <td>${s.descricao}</td>
                 <td>${dataEntrada}</td>
                 <td>${badge}</td>
-                <td>
-                    <a href="editar-os.html?id=${s.documentId}" class="texto-suave" title="Editar">
+                <td style="white-space: nowrap;">
+                    <a href="editar-os.html?id=${s.documentId}" class="texto-suave me-2" title="Editar">
                         <i class="bi bi-pencil-square"></i>
+                    </a>
+                    <a href="#" class="texto-suave btn-deletar" data-id="${s.documentId}" title="Excluir">
+                        <i class="bi bi-trash" style="color: var(--cor-primaria);"></i>
                     </a>
                 </td>
             `;
             tbody.appendChild(tr);
+        });
+
+        document.querySelectorAll('.btn-deletar').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                deletarOS(this.dataset.id);
+            });
         });
 
     } catch (err) {
@@ -55,13 +87,21 @@ async function carregarOS() {
     }
 }
 
-// Mensagem de sucesso ao cadastrar
 if (localStorage.getItem('os_cadastrada')) {
     const msg = document.createElement('div');
     msg.textContent = 'Ordem de serviço cadastrada com sucesso!';
     msg.className = 'alerta-sucesso';
     document.querySelector('.secao-boas-vindas .container').appendChild(msg);
     localStorage.removeItem('os_cadastrada');
+    setTimeout(() => msg.remove(), 3000);
+}
+
+if (localStorage.getItem('os_editada')) {
+    const msg = document.createElement('div');
+    msg.textContent = 'Ordem de serviço atualizada com sucesso!';
+    msg.className = 'alerta-sucesso';
+    document.querySelector('.secao-boas-vindas .container').appendChild(msg);
+    localStorage.removeItem('os_editada');
     setTimeout(() => msg.remove(), 3000);
 }
 
