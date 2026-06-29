@@ -77,7 +77,7 @@ Espera-se uma redução no tempo de entrega dos veículos, maior precisão na ge
 
 | Entidade | Criação | Leitura | Atualização | Remoção |
 | --- | --- | --- | --- | --- |
-| Usuário (User) | ✅ | ✅ | ✅ | |
+| Usuário (User) | ✅ | ✅ | | |
 | Veículo (Car) | ✅ | ✅ | ✅ | ✅ |
 | Ordem de Serviço (Service) | ✅ | ✅ | ✅ | ✅ |
 
