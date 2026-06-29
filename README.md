@@ -5,7 +5,7 @@
 O **Gerenciamento de Oficina** é uma solução digital desenvolvida para otimizar o fluxo de trabalho de centros automotivos. A aplicação permite o controle eficiente de agendamentos, ordens de serviço, manutenção de veículos e gestão de peças, promovendo uma comunicação transparente entre a oficina e os seus clientes.
 
 ## :technologist: Membros da equipe
-André Alves de Freitas - 540683 - EC
+André Alves de Freitas - 540683 - EC  
 Pedro Nobrega Damacena - 536543 - EC
 
 ## :bulb: Objetivo Geral
