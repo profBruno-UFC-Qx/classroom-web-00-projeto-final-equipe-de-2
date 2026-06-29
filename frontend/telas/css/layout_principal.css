@@ -133,3 +133,20 @@
     height: 80px;
     vertical-align: middle;
 }
+
+.acoes-veiculo {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.acoes-veiculo a {
+    color: var(--cor-texto-suave);
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.acoes-veiculo a:hover {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
