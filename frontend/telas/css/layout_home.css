@@ -1,0 +1,68 @@
+.secao-hero {
+    background-color: #0a0a0a;
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 64px 0;
+}
+
+.secao-hero h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: var(--cor-texto);
+}
+
+.secao-hero h1 span {
+    color: var(--cor-primaria);
+}
+
+.secao-hero p {
+    color: var(--cor-texto-suave);
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+    max-width: 480px;
+}
+
+.icone-hero {
+    font-size: 10rem;
+    color: var(--cor-primaria);
+    opacity: 0.15;
+}
+
+.btn-hero {
+    width: auto;
+    padding: 12px 24px;
+    font-size: 0.92rem;
+}
+
+.secao-funcoes h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.card-funcao {
+    height: 100%;
+}
+
+.icone-funcao {
+    font-size: 2.2rem;
+    color: var(--cor-primaria);
+    display: block;
+    margin-bottom: 16px;
+}
+
+.card-funcao h5 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--cor-texto);
+}
+
+.card-funcao p {
+    color: var(--cor-texto-suave);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.texto-hero {
+    color: var(--cor-texto-suave);
+}
