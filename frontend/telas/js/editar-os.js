@@ -14,6 +14,7 @@ if (!documentId) window.location.href = './ordens-servico.html';
 const erroMsg = document.getElementById('erro-os');
 const sucessoMsg = document.getElementById('sucesso-os');
 
+// Carrega os dados atuais das OS
 async function carregarOS() {
     try {
         const response = await fetch(`${API_URL}/api/services/${documentId}?populate=car`, {
@@ -45,7 +46,7 @@ async function carregarOS() {
         erroMsg.style.display = 'block';
     }
 }
-
+// Salva as alterações
 document.getElementById('form-os').addEventListener('submit', async function (e) {
     e.preventDefault();
 

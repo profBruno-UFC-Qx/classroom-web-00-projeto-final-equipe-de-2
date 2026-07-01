@@ -24,7 +24,6 @@ form.addEventListener('submit', async function (e) {
 
     try {
         // PASSO 1: Buscar o ID do carro pela placa
-        // Usamos $eqi para ignorar letras maiúsculas/minúsculas
         const carResponse = await fetch(`${API_URL}/api/cars?filters[placa][$eqi]=${placa}`, {
             headers: { Authorization: `Bearer ${jwt}` }
         });
@@ -48,7 +47,7 @@ form.addEventListener('submit', async function (e) {
             },
             body: JSON.stringify({
                 data: {
-                    numero_os: numeroOs, // Certifique-se de que este nome bate com o seu banco no Strapi
+                    numero_os: numeroOs,
                     descricao: descricao,
                     estado_atual: estado,
                     data_entrada: dataEntrada || null,
