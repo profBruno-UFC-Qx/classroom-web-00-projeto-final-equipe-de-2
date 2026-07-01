@@ -150,3 +150,10 @@
     color: var(--cor-primaria);
     text-decoration: none;
 }
+
+.btn-nova-os {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
