@@ -5,7 +5,7 @@ const userRole = localStorage.getItem('userRole');
 
 // Bloqueia quem não for funcionário
 if (!jwt) window.location.href = './login.html';
-if (userRole !== 'Funcionario') window.location.href = './index.html';
+if (userRole !== 'Funcionario') window.location.href = './login.html';
 
 const form = document.getElementById('form-os');
 const erroMsg = document.getElementById('erro-os');
